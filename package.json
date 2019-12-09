@@ -1,20 +1,22 @@
 {
-  "name": "storybook-tutorial",
+  "name": "react-uikit-sample",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "module": "dist/index.js",
+  "license": "MIT",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "react-spring": "^8.0.27"
-  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@storybook/addon-actions": "^5.2.8",
@@ -23,10 +25,23 @@
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "@svgr/rollup": "^4.3.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-named-asset-import": "^0.3.5",
     "babel-preset-react-app": "^9.1.0",
     "react-docgen-typescript-loader": "^3.6.0",
+    "rollup": "^1.27.9",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-url": "^3.0.1",
     "typescript": "^3.7.3"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-spring": "^8.0.27"
   }
 }
